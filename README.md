@@ -27,4 +27,8 @@ $git mv file_from file_to
 
 //查看日志
 $ git log
+
+//修改还未push到远程仓库的commit  :wq 保存并退出vi  q: 不报错退出vi
+$ git commit --amend
+
 ```
