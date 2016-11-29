@@ -31,4 +31,20 @@ $ git log
 //修改还未push到远程仓库的commit  :wq 保存并退出vi  q: 不报错退出vi
 $ git commit --amend
 
+//添加远程仓库  yourName & yourRepo 参见github或Kelude.code 的Id和项目名
+$ git remote add origin git@github.com:yourName/yourRepo.git
+
+//从远程仓库抓取数据
+$ git fetch [remote-name]
+$ git pull
+
+//推送内容到远程仓库  异常时可以 -f 强制推送
+//非个人项目最好不用(或者将项目全部fetch到本地，然后-f提交)
+$ git push origin master
+
+//查看远程仓库信息
+$ git remote show git
+
+
+
 ```
