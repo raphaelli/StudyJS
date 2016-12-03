@@ -45,6 +45,10 @@ $ git push origin master
 //查看远程仓库信息
 $ git remote show git
 
+//版本回退
+$ git reset --hard HEAD^  //回退上一版本
+
+$ git reset --hard 3628164  //回退制定版本(版本号)
 
 
 ```
