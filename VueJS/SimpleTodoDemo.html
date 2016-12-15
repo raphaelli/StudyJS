@@ -46,6 +46,7 @@
           ]
         },
         methods:{
+          // 添加事件，将intup中的内内容以双向绑定的数据源添加到列表的数据源中
           addTodo:function() {
             var text = this.newTodo.trim()
             if (text) {
@@ -53,6 +54,8 @@
               this.newTodo=''
             }
           },
+          // 删除事件，从todos的列表中删除键值（通过index比较）
+          // js脚本解释 http://www.w3school.com.cn/jsref/jsref_splice.asp
           removeTodo:function(index) {
             this.todos.splice(index,1)
           }
