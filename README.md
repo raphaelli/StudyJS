@@ -3,7 +3,9 @@ This just a demo for my Web-Front Study!
 And for now ,only used for testing GITHUB exercises.
 
 ## Study Vue.JS
-参考Vue.js官方教程逐步实现摸索 Vue.js框架，并把学习的记录发上来
+参考Vue.js官方教程逐步实现摸索 Vue.js框架，并把学习的记录发上来  
+
+为了美化demo，并练习Bootstrap,所有实例均采用[Bootstrap](https://github.com/twbs/bootstrap)样式
 
 - [startVueJS.html](VueJS/startVueJS.html)  VueJS简单的演示
 - [SimpleTodoDemo.html](VueJS/SimpleTodoDemo.html)    简单的Todo Demo

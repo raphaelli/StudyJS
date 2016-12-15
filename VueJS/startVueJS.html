@@ -2,44 +2,77 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <script src="static/vue.js"></script>
-    <title></title>
+    <!-- 引入Vue.js框架 -->
+    <script src="../static/Vue/vue.js"></script>
+    <!-- 引入Bootstrap样式用于美化控件，顺带练习Bootstrap -->
+    <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.min.css">
+    <title>A simple Demo!</title>
   </head>
   <body>
-    <div id="app">
-      <p>
-        {{message}}
-      </p>
-      <input v-model="message">
+    <!-- Bootstrap的网格系统容器 -->
+    <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <!-- Demo1 id为app 在vue的js脚本里实现绑定 -->
+            <div class="panel panel-info" id="app" >
+              <div class="panel-heading">简单的双向绑定Demo</div>
+              <div class="panel-body">
+                <!-- 通过v-moudel实现双向绑定 -->
+                <input v-model="message" class="form-control">
+                <br/>
+                <p class="alert alert-info">
+                  <!--{{ }} 中的内容，即vue对象中的键值 -->
+                  {{message}}
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div id ="app2" class="panel panel-primary">
+              <div class="panel-heading">简单的双向绑定Demo</div>
+              <div class="panel-body">
+                <!-- 采用Bootstrap的列表面板样式 -->
+                <ul class="list-group">
+                  <!-- vue.js中的 v-for渲染列表参看js文件 -->
+                  <li v-for="todo in todos" class="list-group-item">
+                    <!-- 将遍历出来的todo中的text输出出来 -->
+                    {{todo.text}}
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div id = "app3" class="panel panel-warning">
+              <div class="panel-heading">字符串反转demo</div>
+              <div class="panel-body">
+                <p class="alert alert-warning">
+                  {{message}}
+                </p>
+                <input v-model="message" class="form-control">
+                <br/>
+                <!-- 使用v-on渲染click事件 -->
+                <button v-on:click ="reverseMessage" class="btn btn-warning">Reverse Message</button>
+              </div>
+            </div>
+          </div>
+       </div>
     </div>
 
-    <div id ="app2">
-      <ul>
-        <li v-for="todo in todos">
-          {{todo.text}}
-        </li>
-      </ul>
-    </div>
-
-    <div id = "app3">
-      <p>
-        {{message}}
-      </p>
-      <input v-model="message">
-      <button v-on:click ="reverseMessage">Reverse Message</button>
-    </div>
 
     <script type="text/javascript">
       new Vue({
-        el:'#app',
-        data:{
+        el:'#app',  //绑定div
+        data:{   //键值对的形式绑定数据
           message:'Hello Vue.js!'
         }
       })
 
       new Vue({
         el:'#app2',
-        data:{
+        data:{  //创建一个todos的键值数组 v-for遍历todo in todos
           todos:[
             {text:'Learn javascript'},
             {text:'Learn Vue.js'},
@@ -54,7 +87,9 @@
           message:'Hello Vue.js!'
         },
         methods:{
+          //reverseMessage事件所执行的操作
           reverseMessage:function () {
+            //js操作，将message的内容切割为字符然后反转，再添加到message中
             this.message = this.message.split('').reverse().join('')
           }
         }
