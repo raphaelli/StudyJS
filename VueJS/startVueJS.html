@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="static/vue.js"></script>
+    <title></title>
+  </head>
+  <body>
+    <div id="app">
+      <p>
+        {{message}}
+      </p>
+      <input v-model="message">
+    </div>
+
+    <div id ="app2">
+      <ul>
+        <li v-for="todo in todos">
+          {{todo.text}}
+        </li>
+      </ul>
+    </div>
+
+    <div id = "app3">
+      <p>
+        {{message}}
+      </p>
+      <input v-model="message">
+      <button v-on:click ="reverseMessage">Reverse Message</button>
+    </div>
+
+    <script type="text/javascript">
+      new Vue({
+        el:'#app',
+        data:{
+          message:'Hello Vue.js!'
+        }
+      })
+
+      new Vue({
+        el:'#app2',
+        data:{
+          todos:[
+            {text:'Learn javascript'},
+            {text:'Learn Vue.js'},
+            {text:'Build Someting Awesome'}
+          ]
+        }
+      })
+
+      new Vue({
+        el:'#app3',
+        data:{
+          message:'Hello Vue.js!'
+        },
+        methods:{
+          reverseMessage:function () {
+            this.message = this.message.split('').reverse().join('')
+          }
+        }
+      })
+    </script>
+  </body>
+</html>
