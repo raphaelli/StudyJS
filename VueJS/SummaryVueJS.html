@@ -4,13 +4,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <script src="../static/Vue/vue.js"></script>
+    <script src="../static/jquary/jquery-3.1.1.min.js"></script>
     <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.min.css">
+    <script src="../static/codePrettify/prettify.js"></script>
+    <link rel="stylesheet" href="../static/codePrettify/prettify.css">
     <title>VueJS概述</title>
   </head>
-  <body>
+  <body onload="prettyPrint()">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-6 col-xs-12">
+        <div class="col-md-12 col-xs-12">
           <div class="panel panel-info">
             <div class="panel-heading">VueJS概述</div>
             <div class="panel-body">
@@ -37,6 +40,20 @@ Vue.js 的核心是一个响应的数据绑定系统，它让数据与 DOM 保�
 通俗地讲，它意味着我们在普通 HTML 模板中使用特殊的语法将 DOM “绑定”到底层数据。一旦创建了绑定，DOM 将与数据保持同步。每当修改了数据，DOM 便相应地更新。这样我们应用中的逻辑就几乎都是直接修改数据了，不必与 DOM 更新搅在一起。这让我们的代码更容易撰写、理解与维护。
               </p>
               <img src="https://vuejs.org.cn/images/mvvm.png" alt="MVVM" class="img-rounded" width="500px" />
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-xs-12">
+          <div class="panel panel-info">
+            <div class="panel-heading">简单实例</div>
+            <div class="panel-body">
+              <pre class="prettyprint">
+                <!-- 这是我们的 View -->
+                <div id="example-1">
+                  Hello {{ name }}!
+                </div>
+              </pre>
             </div>
           </div>
         </div>
