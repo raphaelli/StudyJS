@@ -9,10 +9,28 @@
   <body onload="prettyPrint(); adjustHeightInParent()">
     <h1>测试代码高亮插件-Google Code Prettify</h1>
     <pre class="prettyprint">
-      &lt;!-- 这是我们的 View --&gt;
-      &lt;div id="example-1"&gt;
-        Hello {{ name }}!
-      &lt;/div&gt;
+&lt;!-- 这是我们的 View --&gt;
+&lt;div id="example-1"&gt;
+  Hello {{ name }}!
+&lt;/div&gt;
     </pre>
+    <pre class="prettyprint">
+// 这是我们的 Model
+var exampleData = {
+  name: 'Vue.js'
+}
+
+// 创建一个 Vue 实例或 "ViewModel"
+// 它连接 View 与 Model
+var exampleVM = new Vue({
+  el: '#example-1',
+  data: exampleData
+})
+    </pre>
+    <div class="well">
+      结果：
+      <samp>Hello Vue.js！</samp>
+    </div>
+
   </body>
 </html>

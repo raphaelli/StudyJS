@@ -4,10 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <script src="../static/Vue/vue.js"></script>
-    <script src="../static/jquary/jquery-3.1.1.min.js"></script>
     <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.min.css">
-    <script src="../static/codePrettify/prettify.js"></script>
-    <link rel="stylesheet" href="../static/codePrettify/prettify.css">
+    <script src="../static/google-code-prettify/prettify.js"></script>
+    <link rel="stylesheet" href="../static/google-code-prettify/tomorrownighteighties.min.css">
     <title>VueJS概述</title>
   </head>
   <body onload="prettyPrint()">
@@ -48,12 +47,31 @@ Vue.js 的核心是一个响应的数据绑定系统，它让数据与 DOM 保�
           <div class="panel panel-info">
             <div class="panel-heading">简单实例</div>
             <div class="panel-body">
+
               <pre class="prettyprint">
-                <!-- 这是我们的 View -->
-                <div id="example-1">
-                  Hello {{ name }}!
-                </div>
+&lt;!-- 这是我们的 View --&gt;
+&lt;div id="example-1"&gt;
+  Hello {{ name }}!
+&lt;/div&gt;
               </pre>
+
+              <pre class="prettyprint">
+// 这是我们的 Model
+var exampleData = {
+  name: 'Vue.js'
+}
+
+// 创建一个 Vue 实例或 "ViewModel"
+// 它连接 View 与 Model
+var exampleVM = new Vue({
+  el: '#example-1',
+  data: exampleData
+})
+              </pre>
+              <div class="well">
+                结果：<br/>
+                <samp>Hello Vue.js！</samp>
+              </div>
             </div>
           </div>
         </div>
