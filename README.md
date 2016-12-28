@@ -10,6 +10,10 @@ And for now ,only used for testing GITHUB exercises.
 - [startVueJS.html](VueJS/startVueJS.html)  VueJS简单的演示
 - [SimpleTodoDemo.html](VueJS/SimpleTodoDemo.html)    简单的Todo Demo
 
+---
+上述示例使用的是vueJs1.0版本，后面切换到2.0版本
+-[declarativeRendering.html](VueJS/declarativeRendering.html) 声明式渲染
+
 
 ## Some command for Github:
 ```
