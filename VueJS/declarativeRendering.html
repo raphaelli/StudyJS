@@ -7,7 +7,7 @@
     <title>声明式渲染</title>
   </head>
   <body>
-    <div class="col-md-4 col-sm-6 col-xs-12">
+    <div class="col-md-4 col-sm-4 col-xs-12">
       <!-- Demo1 id为app 在vue的js脚本里实现绑定 -->
       <div class="panel panel-info" id="app" >
         <div class="panel-heading">简单的双向绑定Demo</div>
@@ -27,7 +27,7 @@
       </div>
     </div>
 
-    <div class="col-md-6 col-sm-6 col-xs-12" id="app2">
+    <div class="col-md-8 col-sm-8 col-xs-12" id="app2">
       <div class="panel panel-default">
         <div class="panel-heading">v-bind方式绑定</div>
         <div class="panel-body">
@@ -35,9 +35,9 @@
             v-bind 属性被称为指令。指令带有前缀 v-，以表示它们是 Vue.js 提供的特殊属性。可能你已经猜到了，它们会在渲染过的 DOM 上应用特殊的响应式行为。这个指令的简单含义是说：将这个元素节点的 title 属性和 Vue 实例的 message 属性绑定到一起。
           </p>
           <br />
-          <span class="alert alert-warning" v-bind:title="message" :style="style">
+          <p class="alert alert-warning" v-bind:title="message">
             Hover your mouse over me for a few seconds to see my dynamically bound title!
-          </span>
+          </p>
 
         </div>
       </div>
@@ -55,8 +55,7 @@
       var app2 = new Vue({
         el:'#app2',
         data:{
-          message:'You loaded this page at'+ new Date(),
-          style:'color=red'
+          message:'You loaded this page at'+ new Date()
         }
       })
     </script>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>条件和循环</title>
+    <script src="../static/Vue/vue.js"></script>
+    <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.min.css" media="screen" title="bootstrapCss">
+  </head>
+  <body>
+    <div class="col-md-6 col-sm-6 col-xs-12" id="app1">
+      <div class="panel panel-info">
+        <div class="panel-heading">vue条件判断</div>
+        <div class="panel-body">
+          <p class="alert alert-warning" v-if="seen">Now you see me！</p>
+          <p>
+            继续在控制台设置 app3.seen = false，你会发现 “Now you see me” 消失了。
+这个例子演示了我们不仅可以绑定 DOM 文本到数据，也可以绑定 DOM 结构到数据。而且，Vue.js 也提供一个强大的过渡效果系统，可以在 Vue 插入/删除元素时自动应用过渡效果。
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-xs-6 col-xs-12" id ="app2">
+      <div class="panel panel-info">
+        <div class="panel-heading">vue列表循环</div>
+        <div class="panel-body">
+          <p>
+            也有一些其它指令，每个都有特殊的功能。例如， v-for 指令可以绑定数据到数组来渲染一个列表：
+          </p>
+          <ul class="list-group">
+            <li class="list-group-item" v-for="item in items">
+              {{item.text}}
+            </li>
+          </ul>
+          <p>
+            在控制台里，输入 app4.todos.push({ text: 'New item' })。你会发现列表中多了一栏新内容。
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      var app1 = new Vue({
+        el:'#app1',
+        data:{
+          seen:true
+        }
+      })
+
+      var app2 = new Vue({
+        el:'#app2',
+        data:{
+          items:[
+            {text:'Learn javascript'},
+            {text:'Learn Vue'},
+            {text:'Build Someting Awesome!'}
+          ]
+        }
+      })
+    </script>
+  </body>
+</html>

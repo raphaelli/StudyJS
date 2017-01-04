@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>组件</title>
+    <script src="../static/Vue/vue.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.min.css" media="screen" title="bootstrapCss">
+  </head>
+  <body>
+    <div class="col-md-6 col-ms-6 col-xs-12" id="app">
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          渲染实例
+        </div>
+        <div class="panel-body">
+            <ol class="list-group">
+              <todo-item class="list-group-item" v-for="item in groceryList" v-bind:todo="item"></todo-item>
+            </ol>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      // 定义一个名为todo-item的组件
+      Vue.component('todo-item', {
+        props: ['todo'],
+        template: '<li>{{ todo.text }}</li>'
+      })
+
+      var app = new Vue({
+        el:"#app",
+        data:{
+          groceryList:[
+            {text:'Vegetables'},
+            {text:'Cheese'},
+            {text:'Whatever else humans are supposed to eat'}
+          ]
+        }
+      })
+    </script>
+  </body>
+</html>
