@@ -19,6 +19,11 @@ And for now ,only used for testing GITHUB exercises.
 - [components.html](VueJS/Introduction/components.html) 组件
 
 ### Vue 实例 The Vue Instance  
+- [Constructor.html](VueJS/VueInstance/Constructor.html) 构造器  
+- [Properties&Methods.html](VueJS/VueInstance/Properties&Methods.html) 属性与方法
+- [LifecycleHooks.html](VueJS/VueInstance/LifecycleHooks.html) 生命周期
+
+### 模板语法 Template Syntax
 
 ## Some command for Github:
 ```

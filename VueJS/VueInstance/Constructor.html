@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>构造器</title>
+    <script src="../../static/Vue/vue.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <script type="text/javascript">
+      //每个Vue实例都是通过构造函数Vue创建一个Vue的根实例启动
+      var vm = new Vue({
+        //选项
+      })
+      //在实例化Vue时，需要传入一个选项对象，包含数据、模板、挂载元素、方法、生命周期等。具体可以查看API文档
+
+      //扩展Vue构造器，预定义选项创造可复用的组件构造器
+      var MyComponent = Vue.Extend({
+        //扩展选项
+      })
+      //所有的“MyComponent” 实例都将以预定义扩展选项呗创建
+      var myComponentInstance = new MyComponent()
+    </script>
+  </body>
+</html>
