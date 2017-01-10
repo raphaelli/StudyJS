@@ -7,16 +7,16 @@ And for now ,only used for testing GITHUB exercises.
 
 为了美化demo，并练习Bootstrap,所有实例均采用[Bootstrap](https://github.com/twbs/bootstrap)样式
 
-- [startVueJS.html](VueJS/startVueJS.html)  VueJS简单的演示  
-- [SimpleTodoDemo.html](VueJS/SimpleTodoDemo.html)    简单的Todo Demo
+- [startVueJS.html](VueJS/Introduction/startVueJS.html)  VueJS简单的演示  
+- [SimpleTodoDemo.html](VueJS/Introduction/SimpleTodoDemo.html)    简单的Todo Demo
 
 ---
 上述示例使用的是vueJs1.0版本，后面切换到2.0版本    
 ### 介绍 Introduction
-- [declarativeRendering.html](VueJS/declarativeRendering.html) 声明式渲染演示demo  
-- [Conditionals&Loops.html](VueJS/conditionals&Loops.html) 条件和循环demo  
-- [UserInput.html](VueJS/UserInput.html) 用户输入内容处理和双向绑定  
-- [components.html](VueJS/components.html) 组件
+- [declarativeRendering.html](VueJS/Introduction/declarativeRendering.html) 声明式渲染演示demo  
+- [Conditionals&Loops.html](VueJS/Introduction/conditionals&Loops.html) 条件和循环demo  
+- [UserInput.html](VueJS/Introduction/UserInput.html) 用户输入内容处理和双向绑定  
+- [components.html](VueJS/Introduction/components.html) 组件
 
 ### Vue 实例 The Vue Instance  
 
